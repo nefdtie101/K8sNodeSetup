@@ -8,3 +8,8 @@ K8sNodeSetup is a script that automates the preparation of nodes for Kubernetes 
    First, ensure that your script has executable permissions. Run the following command in your terminal:
    ```bash
    chmod +x start.sh
+
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
