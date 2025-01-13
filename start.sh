@@ -79,6 +79,7 @@ main() {
   setup_kubernetes
   disable_swap
   configure_sysctl
+  fixcontanerd
   echo "Preparation complete. Reboot the system before proceeding with the Kubernetes installation."
 }
 
