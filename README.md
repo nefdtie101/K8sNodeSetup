@@ -13,3 +13,8 @@ K8sNodeSetup is a script that automates the preparation of nodes for Kubernetes 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+
+bootstrap cluster 
+sudo kubeadm init --control-plane-endpoint "LOAD_BALANCER_DNS:LOAD_BALANCER_PORT" --upload-certs
